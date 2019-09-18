@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    body {
+        font-size: 12px;
+        background-position: center center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-color: rgb(153, 153, 153);
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            padding-top: 100px;
+            box-sizing: border-box;
+            .song-img {
+                position: relative;
+                width: 65%;
+                height: 0;
+                // padding百分比是根据父级宽度进行计算的
+                padding-top: 65%;
+                margin: 0 auto;
+                // border : 1px solid black;
+                .img-box {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    border-radius: 50%;
+                    background-color: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 75%;
+                        height: 75%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .song-info {
+                margin-top: 25px;
+                height: 120px;
+                // border: 1px solid black;
+                text-align: center;
+                color: #fff;
+                div {
+                    line-height: 35px;
+                }
+                .song-name {
+                    font-size: 24px;
+                }
+            }
+            .pro-bar {
+                display: flex;
+                margin-top: 20px;
+                .cur-time,
+                .all-time{
+                    width: 60px;
+                    height: 40px;
+                    // border : 1px solid black;
+                    text-align: center;
+                    line-height: 40px;
+                    color: #fff;
+                }
+                .pro-wrap {
+                    position: relative;
+                    flex : 1;
+                    display: flex;
+                    align-items: center;
+                    .pro-control {
+                        width: 100%;
+                        height: 3px;
+                        background-color: #fff;
+                        border-radius: 15px;
+                    }
+                    .pro-point {
+                        position: absolute;
+                        left: 0px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: rgb(233, 230, 79);
+                    }
+                }
+            }
+            .control {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background-color: rgb(80, 80, 80);
+                display: flex;
+                .btn {
+                    flex: 1;
+                    height: 100%;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: 20px;
+                }
+                .like {
+                    background-image: url(../image/icon-like.png);
+                    &.liking {
+                        background-image: url(../image/icon-like-solid.png)
+                    }
+                }
+                .prev {
+                    background-image: url(../image/icon-prev.png)
+                }
+                .play {
+                    background-image: url(../image/icon-play.png);
+                    &.playing {
+                        background-image: url(../image/icon-pause.png)
+                    }
+                }
+                .next {
+                    background-image: url(../image/icon-next.png)
+                }
+                .list {
+                    background-image: url(../image/icon-list.png)
+                }
+            }
+            .song-list {
+                display: none;
+                width: 100%;
+                height: 200px;
+                background-color: #fff;
+                &.active {
+                    display: block;
+                }
+                .title {
+                    font-size: 18px;
+                    text-align: center;
+                    font-weight: bolder;
+                }
+                .song-box {
+                    font-size: 16px;
+                    li {
+                        margin: 10px 0;
+                        padding-bottom: 5px;
+                        border-bottom: 1px solid rgb(138, 138, 138);
+                        display: flex;
+                        &:hover {
+                            background-color: rgb(216, 236, 226);
+                        }
+                        span {
+                            flex: 1;
+                            text-align: center; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
